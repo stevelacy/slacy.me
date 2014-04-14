@@ -1,4 +1,4 @@
-slacy.me
-========
+# slacy.me
 
-The code for slacy.me
+
+### The code for slacy.me

@@ -1,0 +1,40 @@
+doctype
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" href="/css/main.css")
+		script(src='/js/jquery-2.0.3.js')
+		script(src='/js/js.js')
+		//title #{title}
+
+
+	body
+		.wrap
+			.banner.trans
+
+				.logo
+					include ./logo
+
+				a(style="color:#363636")
+
+				.menu-button.trans
+					span MENU
+					img(src="images/menu_icon_small.png")
+
+
+			.main
+				.menu 
+					
+					include ./menu
+
+
+				.content.white
+					.spacer
+					h1.text-large.text-blue.text-center
+						| 404 Not found
+						br
+						| :(
+
+
+				include ./footer

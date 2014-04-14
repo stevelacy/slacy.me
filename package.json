@@ -1,0 +1,11 @@
+{
+  "name": "S.Lacy",
+  "description": "S.Lacy",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "coffee-script": "*",
+    "express": "*",
+    "jade": "*"
+  }
+}

@@ -1,0 +1,9 @@
+mixin youtube(id, qual)
+	- var yturl = "//youtube.com/embed/"+id+"?wmode=opaque"
+	- if (qual){
+	- 	yturl += "&vq=" + qual
+	-	}
+
+
+	.video-wrap
+		iframe(src=yturl frameborder="0" allowfullscreen)
