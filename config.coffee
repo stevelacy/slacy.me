@@ -3,29 +3,28 @@ module.exports =
 
   menu:
     about:
-      title: "About"
-      link: "about"
+      title: 'About'
+      link: 'about'
     projects:
-      title:"Projects"
-      link: "projects"
+      title:'Projects'
+      link: 'projects'
     contact:
-      title:"Contact"
-      link: "contact"
+      title:'Contact'
+      link: 'contact'
 
   pages:
     index:
-      title: "S.Lacy"
-      view: "index"
+      title: 'S.Lacy'
+      view: 'index'
     about:
-      title: "About"
-      view: "about"
+      title: 'About'
+      view: 'about'
     projects:
-      title: "Projects"
-      view: "projects"
+      title: 'Projects'
+      view: 'projects'
     contact:
-      title: "Contact"
-      view: "contact"
+      title: 'Contact'
+      view: 'contact'
     notFound:
-      title: "404 not found"
-      view: "404"
-
+      title: '404 not found'
+      view: '404'

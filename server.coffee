@@ -1,9 +1,9 @@
-path = require "path"
-express = require "express"
+path = require 'path'
+express = require 'express'
 
-config = require "./config"
+config = require './config'
 
-require "newrelic"
+require 'newrelic'
 
 pages = config.pages
 
@@ -12,12 +12,12 @@ app.set 'view engine', 'jade'
 app.set 'views', __dirname + '/views'
 app.use express.static __dirname + '/static'
 
-app.get "/", (req, res) ->
-  res.render "index", menu: config.menu, title: pages["index"].title
+app.get '/', (req, res) ->
+  res.render 'index', menu: config.menu, title: pages['index'].title
 
-app.get "/:page", (req, res) ->
+app.get '/:page', (req, res) ->
   page = pages[req.params.page] if pages[req.params.page]
-  return res.render pages.notFound.view, {menu: config.menu, title: pages.notFound.title} if !page?
+  return res.render pages.notFound.view, {menu: config.menu, title: pages.notFound.title} unless page?
   res.render page.view,
     page: page
     menu: config.menu
