@@ -1,6 +1,6 @@
 module.exports =
   port: 5000
-  
+
   menu:
     about:
       title: "About"

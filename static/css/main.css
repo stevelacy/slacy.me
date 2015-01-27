@@ -14,7 +14,7 @@
 body{
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
-	overflow-x: hidden;	
+	overflow-x: hidden;
 	color: #262626;
 }
 .summer{
@@ -52,7 +52,7 @@ a:hover{
  	-webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;	
+  transition: all 0.4s ease;
 }
 
 .main, .wrap{
@@ -91,7 +91,7 @@ a:hover{
 	width: 40%;
 	height: 100px;
 	margin-left: 65%;
-	overflow: hidden; 
+	overflow: hidden;
 	z-index: 9;
 }
 .menu li{
@@ -102,7 +102,7 @@ a:hover{
 	background: #fafafa;
 	height: 64px;
 	font-size: 25px;
-	text-align: center; 
+	text-align: center;
 	font-family: 'Lato', Arial, sans-serif;
 	font-weight: lighter;
 	color: #363636;
@@ -149,7 +149,7 @@ a:hover{
 	z-index: 0;
 	padding-bottom: 40%;
 	box-shadow: 0 0 100px rgba(10,10,10, .2) inset;
-	 
+
 }
 .top .diamond{
 	position: absolute;
@@ -162,17 +162,17 @@ a:hover{
 }
 .white{
 	background: #fff;
-} 
+}
 .blue{
 	background: #74daff;
 }
 .pattern{
 	background: #262626;
-} 
- 
+}
+
 .center-block{
 	width: 60%;
-	text-align: center; 
+	text-align: center;
 	margin-left: 20%;
 }
 .center-block img{
@@ -190,7 +190,7 @@ a:hover{
 	margin-bottom: 50px;
 	margin-left: 8%;
 	margin-top: 0;
-	 
+
 }
 .blocks img{
 	width: 100%;
@@ -200,17 +200,17 @@ a:hover{
 }
 .blocks .video-wrap{
 	position: relative;
-	padding-bottom: 56.25%; 
-	padding-top: 20px; 
-	height: 0; 
+	padding-bottom: 56.25%;
+	padding-top: 20px;
+	height: 0;
 	overflow: hidden;
 }
-.blocks .video-wrap iframe { 
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	width: 100%; 
-	height: 100%; 
+.blocks .video-wrap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .footer{
@@ -227,7 +227,7 @@ a:hover{
 	width: 30%;
 	min-height: 30px;
 	margin-left: .5%;
-	display: inline-block; 
+	display: inline-block;
 	margin-top: 20px;
 	background: rgba(10, 10, 10, .5);
 	padding: 30px;
@@ -283,27 +283,27 @@ a:hover{
 
 
 
-::-webkit-scrollbar { 
-	width: 10px; 
-} 
-::-webkit-scrollbar-track { 
-	background: #efefef; 
-	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1); 
-} 
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: #efefef;
+	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+}
 ::-webkit-scrollbar-track:hover{
 	background: #dedede;
 }
-::-webkit-scrollbar-thumb { 
+::-webkit-scrollbar-thumb {
 	background: #CCC;
-	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2); 
+	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
 	border-radius: 1px;
-} 
-::-webkit-scrollbar-thumb:hover { 
-	background: #AAA; 
-} 
-::-webkit-scrollbar-thumb:active { 
-	background: #888; 
--webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3); 
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #AAA;
+}
+::-webkit-scrollbar-thumb:active {
+	background: #888;
+-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 
@@ -361,7 +361,7 @@ a:hover{
 	display: block;
 }
 .menu-button:hover{
-	 
+
 	box-shadow: 0 0 1px #eaeaea;
 }
 .menu-button img{
@@ -374,7 +374,7 @@ a:hover{
 .top{
 	min-height: 100px;
 	max-height: 300px;
-	 
+
 }
 .top .diamond{
 	width: 80%;
@@ -385,7 +385,7 @@ a:hover{
 .footer .blocks{
 	width: 30%;
 	margin-left: .5%;
-	display: inline-block; 
+	display: inline-block;
 	margin-top: 20px;
 	background: rgba(10, 10, 10, .5);
 	padding: 30px;
@@ -398,9 +398,9 @@ a:hover{
 
 
 
- 
+
 /*start phone */
-@media all and (max-width: 680px) { 
+@media all and (max-width: 680px) {
 
 .summer, .hat{
 	-webkit-background-size: 200%;
@@ -409,19 +409,19 @@ a:hover{
 	background-size: 200%;
 
 }
- 
+
 .banner{
- 
+
 	height: 50px;
 }
 .logo{
- 
+
 	top: 10px;
 	left: 3%;
- 
+
 }
 .menu-button{
-	 
+
 	top: 10px;
 	right: 2.5%;
 }
@@ -436,14 +436,14 @@ a:hover{
 }
 .text-huge{
 	font-size: 50px;
-	font-size: 10vw; 
+	font-size: 10vw;
 }
 
 .top{
 	min-height: 100px;
 	max-height: 250px;
 	padding-top: 10px;
-	 
+
 }
 .top .diamond{
 	width: 80%;
@@ -457,13 +457,13 @@ a:hover{
 	display: block;
 	margin:000 1%;
 	padding-bottom: 50px;
-	 
+
 }
 .center-block{
 	width: 100%;
-	text-align: center; 
+	text-align: center;
 	margin-left: 0;
- 
+
 }
 .center-block img{
 	max-width: 100%;
@@ -478,16 +478,16 @@ a:hover{
 	margin-top: 20px;
 	padding: 30px;
 	font-size: 30px
- 
+
 }
 
 .text-large{
 	font-size: 50px;
-	 
+
 }
 .text-huge{
 	font-size: 100px;
-	 
+
 }
 
 
@@ -495,4 +495,4 @@ a:hover{
 
 
 
- 
+
