@@ -2,7 +2,7 @@
   "name": "S.Lacy",
   "description": "S.Lacy",
   "author": "Steve Lacy <me@slacy.me> slacy.me",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
     "coffee-script": "*",
