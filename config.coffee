@@ -3,13 +3,13 @@ module.exports =
 
   menu:
     about:
-      title: 'About'
+      title: 'ABOUT'
       link: 'about'
     projects:
-      title:'Projects'
+      title:'PROJECTS'
       link: 'projects'
     contact:
-      title:'Contact'
+      title:'CONTACT'
       link: 'contact'
 
   pages:

@@ -1,5 +1,10 @@
 path = require 'path'
 express = require 'express'
+stylus = require 'stylus'
+
+####
+livereload = require 'connect-livereload'
+####
 
 config = require './config'
 
@@ -10,6 +15,13 @@ pages = config.pages
 app = express()
 app.set 'view engine', 'jade'
 app.set 'views', __dirname + '/views'
+app.use stylus.middleware
+  src: "#{__dirname}/static/css"
+  dest: "#{__dirname}/static/css"
+  compile: (str) ->
+    stylus str
+    .set 'compress', true
+
 app.use express.static __dirname + '/static'
 
 app.get '/', (req, res) ->

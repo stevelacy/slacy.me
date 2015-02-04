@@ -10,6 +10,17 @@ $(document).ready(function(){
 
 	});
 
+	window.onscroll = function(){
+		scrolled = $(document).scrollTop();
+		console.log(scrolled);
+		if (scrolled > 200) {
+			$('.banner, .menu').addClass('active');
+		}
+		if (scrolled <= 200) {
+			$('.banner, .menu').removeClass('active');
+		}
+	};
+
 
 	var contact = $('body').height();
 
