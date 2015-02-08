@@ -1,6 +1,6 @@
 http = require 'http'
 gulp = require 'gulp'
-es = require 'ecstatic'
+express = require 'express'
 
 source     = require 'vinyl-source-stream'
 buffer     = require 'vinyl-buffer'
@@ -33,17 +33,20 @@ cssSupport = [
 
 # paths
 paths =
-  img: './client/img/**/*'
+  images: './client/images/**/*'
   coffee: './client/**/*.coffee'
   bundle: './client/index.coffee'
   stylus: './client/**/*.styl'
   jade: './client/**/*.jade'
   config: './server/config/*.json'
+  fonts: './client/fonts/*'
 
 gulp.task 'server', (cb) ->
-  port = 5000
-  server = http.createServer es root: './'
-  server.listen port, cb
+  app = express()
+  app.use express.static "#{__dirname}/public"
+  app.get '/*', (req, res) ->
+    res.sendFile "#{__dirname}/public/index.html"
+  app.listen 5000
 
 # javascript
 args =
@@ -75,7 +78,6 @@ gulp.task 'stylus', ->
     .pipe stylus
       use:[
         nib()
-        autoprefixer cascade: true
       ]
     .pipe sourcemaps.write()
     .pipe concat 'app.css'
@@ -93,9 +95,9 @@ gulp.task 'vendor', ->
     .pipe gulp.dest './public/vendor'
     .pipe reload()
 
-gulp.task 'img', ->
-  gulp.src paths.img
-    .pipe gulp.dest './public/img'
+gulp.task 'images', ->
+  gulp.src paths.images
+    .pipe gulp.dest './public/images'
     .pipe reload()
 
 gulp.task 'fonts', ->
@@ -109,8 +111,8 @@ gulp.task 'watch', ->
 
 gulp.task 'css', ['stylus']
 gulp.task 'js', ['coffee']
-gulp.task 'static', ['jade', 'img']
-gulp.task 'default', ['js', 'css', 'static', 'server', 'watch']
+gulp.task 'static', ['jade', 'images']
+gulp.task 'default', ['js', 'css', 'static', 'server', 'watch', 'fonts']
 
 
 reload.listen()
