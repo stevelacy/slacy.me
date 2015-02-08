@@ -1,0 +1,23 @@
+@import 'nib'
+
+.component.menubutton
+  cursor: pointer
+  fixed: top 25px right 25px
+  transition: all .3s ease
+  height: 35px
+  width: 35px
+  border: none
+  background: none
+  outline: none
+  opacity: .99
+  z-index: 8
+  .bar
+    transition: all .3s ease
+    relative
+    width: 35px
+    height: 4px
+    background: #171717
+    margin-bottom: 7px
+  &.light
+    .bar
+      background: #fff
