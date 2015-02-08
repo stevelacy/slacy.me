@@ -11,6 +11,12 @@ module.exports = router
       about:
         view: About
         path: 'about'
+      projects:
+        view: About
+        path: 'projects'
+      contact:
+        view: About
+        path: 'contact'
       index:
         view: Index
         default: true
