@@ -1,0 +1,51 @@
+
+blue = #74daff
+
+
+
+.loader
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  //background: rgba(10, 100, 140, .95)
+  z-index: 9
+  .top, .bottom
+    position: absolute
+    width: 100%
+    height: 50%
+    background: #000
+  .top
+    top: 0
+  .bottom
+    top: 50vh
+
+
+
+  .line
+    z-index: 2
+    transition: all 1s ease
+    position: absolute
+    top: 50%
+    transform: translateY(-50%) scaleX(0)
+    width: 100%
+    height: 5px
+    background: blue
+  img
+    transition: all .3s
+    z-index: 5
+    position: relative
+    top: 50%
+    width: 20vw
+    margin-left: 40vw
+    transform: translateY(-50%)
+    &.large
+      transform: translateY(-50%) scale(4)
+
+.page.application
+  position: relative
+  top: 0
+  display: block
+  width: 100%
