@@ -1,4 +1,4 @@
-{component, DOM} = require 'fission'
+{component, DOM, Link} = require 'fission'
 {div, span, button} = DOM
 
 module.exports = component
@@ -10,5 +10,6 @@ module.exports = component
     div className: 'component navbar',
       div className: 'logo'
       ,
-        span className: 'blue', 'S'
-        '.LACY'
+        Link to: '/',
+          span className: 'blue', 'S'
+          '.LACY'

@@ -30,8 +30,20 @@ module.exports = component
         color: 'light'
       div
         className: 'items',
-          Link to: '/', li null, 'HOME'
-          Link to: 'about', li null, 'ABOUT'
-          Link to: 'projects', li null, 'PROJECTS'
-          Link to: 'contact', li null, 'CONTACT'
+          Link
+            onClick: @close
+            to: '/',
+            li null, 'HOME'
+          Link
+            onClick: @close
+            to: 'about',
+            li null, 'ABOUT'
+          Link
+            onClick: @close
+            to: 'projects',
+            li null, 'PROJECTS'
+          Link
+            onClick: @close
+            to: 'contact',
+            li null, 'CONTACT'
 

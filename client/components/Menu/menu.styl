@@ -1,3 +1,5 @@
+@import '../../css/imports/colors'
+
 @import 'nib'
 
 .component.menu
@@ -6,18 +8,18 @@
   width: 100vw
   background: rgba(255, 80, 80, 1)
   background: linear-gradient(to right, rgba(255, 80, 80, .95), rgba(255, 80, 80, 1));
+  background: blue
   z-index: 9
   .items
-    position: absolute
-    top: 40%
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
     left: 10%
-    vertical-align: middle
     width: 80%
-    height: 30%
     text-align: center
     li
       transition: all .5s ease
-      margin: 5px auto
+      margin: 25px auto
       width: 250px
       padding: 5px
       list-style: none
