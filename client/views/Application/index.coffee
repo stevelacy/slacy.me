@@ -4,6 +4,7 @@
 Navbar = require '../../components/Navbar'
 Menu = require '../../components/Menu'
 MenuButton = require '../../components/MenuButton'
+Footer = require '../../components/Footer'
 
 
 module.exports = view
@@ -34,6 +35,7 @@ module.exports = view
     setTimeout =>
       @setState
         img: 'large'
+        first: 'animated'
     , 1000
 
     setTimeout =>
@@ -52,7 +54,7 @@ module.exports = view
     , 2200
   render: ->
     div
-      className: 'application page'
+      className: 'application view'
     ,
       div
         className: "loader fadeOut #{@state.third}"
@@ -63,7 +65,7 @@ module.exports = view
           className: "line fadeOut #{@state.second}"
           style: @state.line
         img
-          className: @state.img
+          className: "#{@state.img} fadeOut #{@state.first}"
           src: '/images/diamond_s.png'
         div className: "bottom fadeOutDownBig #{@state.second}"
 
@@ -75,3 +77,4 @@ module.exports = view
       MenuButton
         toggleMenu: @toggleMenu
       ChildView()
+      Footer()

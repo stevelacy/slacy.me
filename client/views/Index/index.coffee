@@ -7,7 +7,7 @@ module.exports = view
   displayName: 'Index'
   render: ->
     div
-      className: 'index page'
+      className: 'index view'
     ,
       Topbox()
       div className: 'content',
@@ -18,3 +18,4 @@ module.exports = view
           div className: 'right dgrey',
             div className: 'statement',
               span className: 'emphasis', 'PROBLEMS'
+        div className: 'box'
