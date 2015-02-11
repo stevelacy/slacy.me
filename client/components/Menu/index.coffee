@@ -14,6 +14,9 @@ module.exports = component
     setTimeout =>
       @setState opacity: 1
     , 10
+  contact: ->
+    window.scrollTo 0, 4000
+    @close()
   close: ->
     @setState animation: 'bounceOutRight'
     setTimeout =>
@@ -42,8 +45,7 @@ module.exports = component
             onClick: @close
             to: 'projects',
             li null, 'PROJECTS'
-          Link
-            onClick: @close
-            to: 'contact',
+          div
+            onClick: @contact
             li null, 'CONTACT'
 
