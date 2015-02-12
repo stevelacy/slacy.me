@@ -26,6 +26,7 @@ module.exports = view
     @setState menu: !@state.menu
 
   mounted: ->
+    document.title = 'S.Lacy'
 
     setTimeout =>
       @setState
