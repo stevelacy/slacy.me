@@ -4,7 +4,8 @@
 
 
 body
-  font-intro()
+  //font-intro()
+  font-family: "Helvetica Neue", Arial, sans-serif
 
 
 .box
@@ -33,14 +34,17 @@ a
       display: block
       float: left
       height: 100%
-  .statement
+  .statement, .message
     width: 100%
     text-align: center
     font-size: 15vw
     position: relative
     top: 50%
     transform: translateY(-50%)
-
+  .message
+    font-size: 2vw
+    @media all and (max-width: 800px)
+      font-size: 6vw
 
 ::selection
   background: blue

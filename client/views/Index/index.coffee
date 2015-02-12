@@ -18,4 +18,4 @@ module.exports = view
           div className: 'right dgrey',
             div className: 'statement',
               span className: 'emphasis', 'PROBLEMS'
-        div className: 'box'
+        div className: 'box',
