@@ -9,7 +9,8 @@ module.exports = view
     div
       className: 'index view'
     ,
-      Topbox()
+      Topbox
+        image: '/images/bg.jpg'
       div className: 'content',
         div className: 'box',
           div className: 'left blue',

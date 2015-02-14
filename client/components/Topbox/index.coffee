@@ -6,4 +6,8 @@ module.exports = component
   render: ->
     div
       className: 'component topbox',
-        img src: '/images/diamond_l.png'
+      style:
+        background: "#171717 url(#{@props.image})"
+        backgroundSize: 'cover'
+        backgroundPosition: 'center'
+      img src: '/images/diamond_l.png'
