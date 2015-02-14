@@ -11,6 +11,5 @@ module.exports = view
         image: '/images/headphones.jpg'
       div className: 'content',
         div className: 'box',
-          'About'
           div className: 'statement',
-            'TEST'
+            'ABOUT'
