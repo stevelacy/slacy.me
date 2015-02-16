@@ -4,9 +4,10 @@
 
 
 body
-  //font-intro()
-  font-family: "Helvetica Neue", Arial, sans-serif
-
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif
+  font-weight: 300
+  font-smoothing: antialiased
+  text-rendering: optimizeLegibility
 
 .box
   width: 100%
@@ -48,21 +49,3 @@ a
 
 ::selection
   background: blue
-
-::-webkit-scrollbar
-  width 10px
-
-::-webkit-scrollbar-track
-  background rgba(100, 100, 100, .5)
-  -webkit-box-shadow inset 1px 1px 2px rgba(0,0,0,0.1)
-
-::-webkit-scrollbar-thumb
-  background #262626
-  -webkit-box-shadow inset 1px 1px 2px rgba(0,0,0,0.2)
-  border-radius 1px
-  &:hover
-    background #555
-  &:active
-    background #444
-    -webkit-box-shadow inset 1px 1px 2px rgba(0,0,0,0.3)
-
