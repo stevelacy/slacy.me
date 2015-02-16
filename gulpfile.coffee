@@ -17,7 +17,7 @@ plumber = require 'gulp-plumber'
 reload = require 'gulp-livereload'
 
 sourcemaps = require 'gulp-sourcemaps'
-autoprefixer = require 'autoprefixer-stylus'
+autoprefixer = require 'gulp-autoprefixer'
 
 autowatch = require 'gulp-autowatch'
 
@@ -26,7 +26,9 @@ nib = require 'nib'
 cssSupport = [
   'last 5 versions',
   '> 1%',
-  'ie 8', 'ie 7',
+  'ie 8',
+  'ie 7',
+  'ie 6',
   'Android 4',
   'BlackBerry 10'
 ]
@@ -79,6 +81,7 @@ gulp.task 'stylus', ->
       use:[
         nib()
       ]
+    .pipe autoprefixer browsers: cssSupport
     .pipe sourcemaps.write()
     .pipe concat 'app.css'
     .pipe gulp.dest './public'
