@@ -12,4 +12,4 @@ module.exports = view
       div className: 'content',
         div className: 'box',
           div className: 'statement',
-            'ABOUT'
+            'ABOUT ME'
