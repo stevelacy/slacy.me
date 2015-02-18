@@ -1,17 +1,25 @@
 @import '../../css/imports/fonts'
+@import '../../css/imports/colors'
 
 .view.index
   display: block
 
-
   .content
     z-index: 1
     .statement
-      font-ostrich()
+      &.bold
+        font-ostrich()
       .emphasis
         font-ostrich-lite()
     .box
       transition: all 1s
-      opacity: .2
+      &.animation
+        opacity: .2
       &.animated
         opacity: 1
+    a
+      color: blue
+      border-bottom: 2px solid rgba(0,0,0,0)
+      transition: all 1s
+      &:hover
+        border-bottom: 2px solid #171717

@@ -65,6 +65,9 @@ module.exports = view
         div
           className: "line fadeOut #{@state.second}"
           style: @state.line
+        div
+          className: "line bottom fadeOut #{@state.second}"
+          style: @state.line
         img
           className: "#{@state.img} #{@state.first}"
           src: '/images/diamond_s.png'

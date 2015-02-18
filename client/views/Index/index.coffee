@@ -1,5 +1,5 @@
 {DOM, view} = require 'fission'
-{div, span} = DOM
+{div, span, br, a} = DOM
 
 Topbox = require '../../components/Topbox'
 
@@ -9,7 +9,6 @@ module.exports = view
     box: null
   mounted: ->
     window.onscroll = =>
-      console.log window.pageYOffset
       if window.pageYOffset > 200
         if @isMounted()
           @setState box: 'animated'
@@ -20,11 +19,26 @@ module.exports = view
       Topbox
         image: '/images/bg.jpg'
       div className: 'content',
-        div className: "box #{@state.box}",
+        div className: "box animation #{@state.box}",
           div className: 'left blue',
-            div className: 'statement',
+            div className: 'statement bold',
               'I SOLVE'
           div className: 'right dgrey',
             div className: 'statement',
               span className: 'emphasis', 'PROBLEMS'
         div className: 'box',
+          div className: 'align',
+            div className: 'message header', 'Steve Lacy'
+            div className: 'message', 'Open source enthusiast'
+            div className: 'message', 'Software engineer'
+            br null
+            div className: 'message header', 'Links'
+            div className: 'message',
+              a
+                target: '_blank'
+                href: 'https://github.com/stevelacy', 'github.com/stevelacy'
+
+            div className: 'message',
+              a
+                target: '_blank'
+                href: 'https://twitter.com/stevedelacy', 'twitter.com/stevedelacy'
