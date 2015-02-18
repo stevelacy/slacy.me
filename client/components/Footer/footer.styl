@@ -8,21 +8,24 @@
   text-align: center
   padding: 3vw
   padding-bottom: 5vw
+  height: 50vh
   .text
     font-rafale()
-    background: rgba(0, 190, 220, .3)
     position: relative
+    background: rgba(0, 190, 220, .3)
     transition: all .5s
     padding: 1vw
     color: blue
     margin: 2vw
     font-size: 4vw
-    border: 10px solid rgba(0,0,0,0)
+    border: 0.7vw solid rgba(0,0,0,0)
     display: inline-block
+    top: 50%
+    transform: translateY(-50%)
     &:hover
       background: rgba(0, 0, 0, .5)
       color: lighten(blue, 20%)
-      border: 10px solid blue
+      border: 0.7vw solid blue
   .copy
     position: absolute
     left: 25vw

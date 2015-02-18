@@ -2,7 +2,6 @@
 @import 'imports/fonts'
 @import 'imports/colors'
 
-
 body
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif
   font-weight: 300
@@ -25,27 +24,34 @@ div
 a
   text-decoration: none
 
-
 .content
   position: relative
   .box
-    height: 50vh
+    height: 100vh
     .left, .right
       width: 50%
       display: block
       float: left
       height: 100%
-  .statement, .message
+    &.half
+      height: 50vh
+  .statement
     width: 100%
-    text-align: center
     font-size: 15vw
+  .align, .statement
+    text-align: center
     position: relative
     top: 50%
     transform: translateY(-50%)
+
   .message
-    font-size: 2vw
-    @media all and (max-width: 800px)
-      font-size: 6vw
+    font-size: 20px
+    &.header
+      margin: 20px 0 10px 0
+      font-size: 30px
+
+.highlight
+  background: blue
 
 ::selection
   background: blue
