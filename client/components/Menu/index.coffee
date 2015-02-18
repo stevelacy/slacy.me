@@ -1,5 +1,5 @@
 {component, DOM, Link} = require 'fission'
-{div, li} = DOM
+{div, li, a} = DOM
 
 MenuButton = require '../MenuButton'
 
@@ -16,6 +16,9 @@ module.exports = component
     , 10
   contact: ->
     window.scrollTo 0, 4000
+    @close()
+  home: ->
+    window.scrollTo 0, 0
     @close()
   close: ->
     @setState animation: 'bounceOutRight'
@@ -34,16 +37,13 @@ module.exports = component
       div
         className: 'items',
           Link
-            onClick: @close
+            onClick: @home
             to: '/',
             li null, 'HOME'
-          Link
+          a
             onClick: @close
-            to: 'about',
-            li null, 'ABOUT'
-          Link
-            onClick: @close
-            to: 'projects',
+            target: '_blank'
+            href: 'https://github.com/stevelacy?tab=repositories',
             li null, 'PROJECTS'
           div
             onClick: @contact
