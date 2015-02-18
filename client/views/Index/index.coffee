@@ -5,6 +5,13 @@ Topbox = require '../../components/Topbox'
 
 module.exports = view
   displayName: 'Index'
+  init: ->
+    box: null
+  mounted: ->
+    window.onscroll = =>
+      console.log window.pageYOffset
+      if window.pageYOffset > 200
+        @setState box: 'animated'
   render: ->
     div
       className: 'index view'
@@ -12,7 +19,7 @@ module.exports = view
       Topbox
         image: '/images/bg.jpg'
       div className: 'content',
-        div className: 'box',
+        div className: "box #{@state.box}",
           div className: 'left blue',
             div className: 'statement',
               'I SOLVE'
