@@ -8,6 +8,8 @@ module.exports = router
   app:
     path: '/'
     view: Application
+    defaultChild:
+      view: Index
     children:
       about:
         view: About
@@ -18,6 +20,3 @@ module.exports = router
       contact:
         view: About
         path: 'contact'
-      index:
-        view: Index
-        default: true

@@ -11,7 +11,8 @@ module.exports = view
     window.onscroll = =>
       console.log window.pageYOffset
       if window.pageYOffset > 200
-        @setState box: 'animated'
+        if @isMounted()
+          @setState box: 'animated'
   render: ->
     div
       className: 'index view'
