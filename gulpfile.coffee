@@ -15,10 +15,8 @@ uglify = require 'gulp-uglify'
 concat = require 'gulp-concat'
 plumber = require 'gulp-plumber'
 reload = require 'gulp-livereload'
-
-sourcemaps = require 'gulp-sourcemaps'
 autoprefixer = require 'gulp-autoprefixer'
-
+csso = require 'gulp-csso'
 autowatch = require 'gulp-autowatch'
 
 nib = require 'nib'
@@ -67,23 +65,19 @@ gulp.task 'coffee', ->
       console.error err
     .pipe source 'index.js'
     .pipe buffer()
-    .pipe sourcemaps.init
-      loadMaps: true
-    .pipe sourcemaps.write '.'
     .pipe gulp.dest './public'
     .pipe gif '*.js', reload()
 
 # styles
 gulp.task 'stylus', ->
   gulp.src paths.stylus
-    .pipe sourcemaps.init()
     .pipe stylus
       use:[
         nib()
       ]
     .pipe autoprefixer browsers: cssSupport
-    .pipe sourcemaps.write()
     .pipe concat 'app.css'
+    .pipe csso()
     .pipe gulp.dest './public'
     .pipe reload()
 
