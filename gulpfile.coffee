@@ -65,6 +65,7 @@ gulp.task 'coffee', ->
       console.error err
     .pipe source 'index.js'
     .pipe buffer()
+    .pipe uglify()
     .pipe gulp.dest './public'
     .pipe gif '*.js', reload()
 
