@@ -43,7 +43,7 @@ module.exports = component
           a
             onClick: @close
             target: '_blank'
-            href: 'https://github.com/stevelacy?tab=repositories',
+            href: 'https://github.com/stevelacy',
             li null, 'PROJECTS'
           div
             onClick: @contact
