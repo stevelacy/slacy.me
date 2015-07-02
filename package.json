@@ -26,10 +26,6 @@
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.3.0"
   },
-  "dependencies": {
-    "express": "^4.11.2",
-    "newrelic": "^1.17.1"
-  },
   "scripts": {
     "start": "node index.js"
   }
