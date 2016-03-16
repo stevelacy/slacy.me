@@ -26,33 +26,31 @@ module.exports = view
     @setState menu: !@state.menu
 
   mounted: ->
-    document.title = 'S.Lacy'
+    document.title = 'S.LACY'
 
-    setTimeout =>
-      @setState
-        line: transform: 'translateY(-50%) scaleX(1)'
-    , 500
+    @setState
+      line: transform: 'translateY(-50%) scaleX(1)'
 
     setTimeout =>
       @setState
         img: 'large'
         first: 'animated'
-    , 1000
+    , 750
 
     setTimeout =>
       @setState
         second: 'animated'
-    , 1200
+    , 1400
 
     setTimeout =>
       @setState
         third: 'animated'
-    , 1800
+    , 2800
 
     setTimeout =>
       @setState
         display: 'none'
-    , 2200
+    , 3500
   render: ->
     div
       className: 'application view'

@@ -5,7 +5,7 @@ MenuButton = require '../MenuButton'
 
 module.exports = component
   init: ->
-    return animation: 'bounceInRight'
+    return animation: 'fadeInRight'
   mounted: ->
     if @isMounted()
       document.onkeyup = (e) =>
@@ -21,7 +21,7 @@ module.exports = component
     window.scrollTo 0, 0
     @close()
   close: ->
-    @setState animation: 'bounceOutRight'
+    @setState animation: 'fadeOutRight'
     setTimeout =>
       @props.onClose()
     , 500
