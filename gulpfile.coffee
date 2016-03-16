@@ -2,22 +2,23 @@ http = require 'http'
 gulp = require 'gulp'
 express = require 'express'
 
-source     = require 'vinyl-source-stream'
-buffer     = require 'vinyl-buffer'
-coffeeify  = require 'coffeeify'
-browserify   = require 'browserify'
+source = require 'vinyl-source-stream'
+buffer = require 'vinyl-buffer'
+coffeeify = require 'coffeeify'
+browserify = require 'browserify'
 watchify = require 'watchify'
 
 gif = require 'gulp-if'
 jade = require 'gulp-jade'
+csso = require 'gulp-csso'
 stylus = require 'gulp-stylus'
 uglify = require 'gulp-uglify'
 concat = require 'gulp-concat'
-plumber = require 'gulp-plumber'
 reload = require 'gulp-livereload'
-autoprefixer = require 'gulp-autoprefixer'
-csso = require 'gulp-csso'
+replace = require 'gulp-replace'
+plumber = require 'gulp-plumber'
 autowatch = require 'gulp-autowatch'
+autoprefixer = require 'gulp-autoprefixer'
 
 nib = require 'nib'
 
@@ -85,6 +86,7 @@ gulp.task 'stylus', ->
 gulp.task 'jade', ->
   gulp.src paths.jade
     .pipe jade()
+    .pipe replace 'CACHE_BUST', Math.random()
     .pipe gulp.dest './public'
     .pipe reload()
 
