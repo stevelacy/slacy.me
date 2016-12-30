@@ -4,16 +4,11 @@
 MenuButton = require '../MenuButton'
 
 module.exports = component
-  init: ->
-    return animation: 'fadeInRight'
   mounted: ->
     if @isMounted()
       document.onkeyup = (e) =>
         if e.keyCode == 27
           @close()
-    setTimeout =>
-      @setState opacity: 1
-    , 10
   contact: ->
     window.scrollTo 0, 4000
     @close()
@@ -21,14 +16,11 @@ module.exports = component
     window.scrollTo 0, 0
     @close()
   close: ->
-    @setState animation: 'fadeOutRight'
-    setTimeout =>
-      @props.onClose()
-    , 500
+    @props.onClose()
 
   render: ->
     div
-      className: "menu component #{@state.animation} animated"
+      className: "menu component"
     ,
       MenuButton
         toggleMenu: @close

@@ -6,9 +6,10 @@
   width: 100%
   background: dgrey
   text-align: center
-  padding: 3vw
-  padding-bottom: 5vw
-  height: 50vh
+  padding: 5vw
+  display: flex
+  justify-content: center
+  align-items: center
   .text
     font-rafale()
     position: relative
@@ -19,9 +20,6 @@
     margin: 2vw
     font-size: 4vw
     border: 0.7vw solid rgba(0,0,0,0)
-    display: inline-block
-    top: 50%
-    transform: translateY(-50%)
     &:hover
       background: rgba(0, 0, 0, .5)
       color: lighten(blue, 20%)
@@ -37,6 +35,7 @@
     text-align: center
 @media all and (max-width: 800px)
   .component.footer
+    flex-direction: column
     .text
-      font-size: 10vw
+      font-size: 8vw
       width: 90%
