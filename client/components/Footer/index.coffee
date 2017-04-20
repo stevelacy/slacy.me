@@ -9,9 +9,9 @@ module.exports = component
 
       a
         className: 'text'
-        href: 'https://twitter.com/stevedelacy'
+        href: 'https://twitter.com/steve_lacy'
         target: '_blank'
-      , '@SteveDeLacy'
+      , '@steve_lacy'
 
 
       a

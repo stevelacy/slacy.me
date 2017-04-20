@@ -44,5 +44,5 @@ module.exports = view
             div className: 'message',
               a
                 target: '_blank'
-                href: 'https://twitter.com/stevedelacy'
-                'twitter.com/stevedelacy'
+                href: 'https://twitter.com/steve_lacy'
+                'twitter.com/steve_lacy'
