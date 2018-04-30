@@ -1,0 +1,123 @@
+@import './colors'
+
+*, *:before, *:after
+  margin: 0
+  padding: 0
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  z-index: 0
+
+a
+  color: #171717
+  text-decoration: none
+  &:hover
+    color: #000
+    text-decoration: underline
+
+body
+  width: 100vw
+  height: 100vh
+  background-color: $accent-dark
+  color: $white
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  line-height: 1.5
+  font-size: 1em
+  font-weight: 300
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background: url("images/bg.jpg") no-repeat top center
+  background-size: cover
+
+.main
+  height: 100%
+  width: 100%
+  display: flex
+  flex: 1
+  flex-direction: column
+  background: linear-gradient($accent-dark-transparent, $accent-dark)
+
+.navbar
+  width: 100%
+  height: 80px
+  padding: 16px
+  display: flex
+  z-index: 4
+
+  .logo
+    color: $accent
+    text-decoration: none
+    font-size: 2rem
+    line-height: 2rem
+
+  .nav-button
+    position: relative
+    display: flex
+    height: 50px
+    width: 64px
+    background: transparent
+    border: none
+    outline: none
+    flex-direction: column
+    z-index: 2
+    margin-left: auto
+    align-items: flex-end
+    cursor: pointer
+    &:hover
+      .bar
+        width: 48px !important
+    .bar
+      width: 48px
+      height: 2px
+      margin-bottom: 8px
+      background-color: $accent
+      transition: width .3s
+      &.short
+        width: 28px
+      &.medium
+        width: 36px
+      &.long
+        width: 64px
+
+  .menu
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+    visibility: 0
+    background: $accent
+    transition: all .4s
+    z-index: -1
+    width: 100%
+    max-width: 500px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    font-size: 3rem
+    a
+      color: $white
+
+  .showmenu
+    display: none
+    &:checked
+      + .menu
+        opacity: 1
+        visibility: 1
+        z-index: 2
+      ~ .nav-button .bar
+        background-color: $white
+
+.content
+  z-index: 1
+  display: flex
+  margin-top: auto
+  margin-bottom: 10vh
+  padding: 64px
+  flex-direction: column
+  a
+    color: $accent
+  .statement
+    list-style: none
+    font-size: 1.5rem
+    text-transform: uppercase

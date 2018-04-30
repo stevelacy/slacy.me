@@ -1,0 +1,41 @@
+*, *:before, *:after { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; z-index: 0; }
+
+a { color: #171717; text-decoration: none; }
+
+a:hover { color: #000; text-decoration: underline; }
+
+body { width: 100vw; height: 100vh; background-color: #1d2c38; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; line-height: 1.5; font-size: 1em; font-weight: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background: url("images/bg.jpg") no-repeat top center; background-size: cover; }
+
+.main { height: 100%; width: 100%; display: flex; flex: 1; flex-direction: column; background: linear-gradient(rgba(29, 44, 56, 0.5), #1d2c38); }
+
+.navbar { width: 100%; height: 80px; padding: 16px; display: flex; z-index: 4; }
+
+.navbar .logo { color: #00bedc; text-decoration: none; font-size: 2rem; line-height: 2rem; }
+
+.navbar .nav-button { position: relative; display: flex; height: 50px; width: 64px; background: transparent; border: none; outline: none; flex-direction: column; z-index: 2; margin-left: auto; align-items: flex-end; cursor: pointer; }
+
+.navbar .nav-button:hover .bar { width: 48px !important; }
+
+.navbar .nav-button .bar { width: 48px; height: 2px; margin-bottom: 8px; background-color: #00bedc; transition: width .3s; }
+
+.navbar .nav-button .bar.short { width: 28px; }
+
+.navbar .nav-button .bar.medium { width: 36px; }
+
+.navbar .nav-button .bar.long { width: 64px; }
+
+.navbar .menu { position: absolute; top: 0; right: 0; bottom: 0; opacity: 0; visibility: 0; background: #00bedc; transition: all .4s; z-index: -1; width: 100%; max-width: 500px; display: flex; justify-content: center; align-items: center; flex-direction: column; font-size: 3rem; }
+
+.navbar .menu a { color: #fff; }
+
+.navbar .showmenu { display: none; }
+
+.navbar .showmenu:checked + .menu { opacity: 1; visibility: 1; z-index: 2; }
+
+.navbar .showmenu:checked ~ .nav-button .bar { background-color: #fff; }
+
+.content { z-index: 1; display: flex; margin-top: auto; margin-bottom: 10vh; padding: 64px; flex-direction: column; }
+
+.content a { color: #00bedc; }
+
+.content .statement { list-style: none; font-size: 1.5rem; text-transform: uppercase; }
