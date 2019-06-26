@@ -39,3 +39,11 @@ body { width: 100vw; height: 100vh; color: #fff; font-family: -apple-system, Bli
 .content a { color: #00bedc; }
 
 .content .statement { list-style: none; font-size: 1.5rem; text-transform: uppercase; }
+
+.not-found { height: 100vh; width: 100vw; background-color: #00bedc; }
+
+.not-found .container { max-width: 800px; margin: 0 auto; }
+
+.not-found .container .huge-text { font-size: 10rem; font-weight: bold; }
+
+.not-found .container .medium-text { font-size: 6rem; }
