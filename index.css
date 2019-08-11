@@ -36,9 +36,11 @@ body { width: 100vw; height: 100vh; color: #fff; font-family: -apple-system, Bli
 
 .content { z-index: 1; display: flex; margin-top: auto; margin-bottom: 10vh; padding: 64px; flex-direction: column; }
 
+.content .statement { color: #00bedc; font-size: 8rem; }
+
 .content a { color: #00bedc; }
 
-.content .statement { list-style: none; font-size: 1.5rem; text-transform: uppercase; }
+.content .link { list-style: none; font-size: 1.5rem; text-transform: uppercase; }
 
 .not-found { height: 100vh; width: 100vw; background-color: #00bedc; }
 
@@ -47,3 +49,9 @@ body { width: 100vw; height: 100vh; color: #fff; font-family: -apple-system, Bli
 .not-found .container .huge-text { font-size: 10rem; font-weight: bold; }
 
 .not-found .container .medium-text { font-size: 6rem; }
+
+@media all and (max-width: 600px) { .content { padding: 16px; }
+  .content .statement { font-size: 4rem; } }
+
+@media all and (max-width: 400px) { .content { padding: 16px; }
+  .content .statement { font-size: 3rem; } }

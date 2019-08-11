@@ -114,9 +114,12 @@ body
   margin-bottom: 10vh
   padding: 64px
   flex-direction: column
+  .statement
+    color: $accent
+    font-size: 8rem
   a
     color: $accent
-  .statement
+  .link
     list-style: none
     font-size: 1.5rem
     text-transform: uppercase
@@ -133,3 +136,14 @@ body
       font-weight: bold
     .medium-text
       font-size: 6rem
+
+@media all and (max-width: 600px)
+  .content
+    padding: 16px
+    .statement
+      font-size: 4rem
+@media all and (max-width: 400px)
+  .content
+    padding: 16px
+    .statement
+      font-size: 3rem
